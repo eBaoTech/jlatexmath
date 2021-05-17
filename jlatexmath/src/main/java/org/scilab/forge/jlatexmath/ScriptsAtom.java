@@ -76,6 +76,18 @@ public class ScriptsAtom extends Atom {
             align = TeXConstants.ALIGN_RIGHT;
     }
 
+    public Atom getBase() {
+      return base;
+    }
+
+    public Atom getSubscript() {
+      return subscript;
+    }
+
+    public Atom getSuperscript() {
+      return superscript;
+    }
+
     public Box createBox(TeXEnvironment env) {
         Box b = (base == null ? new StrutBox(0, 0, 0, 0) : base.createBox(env));
         Box deltaSymbol = new StrutBox(0, 0, 0, 0);
@@ -225,5 +237,10 @@ public class ScriptsAtom extends Atom {
 
     public int getRightType() {
         return base.getRightType();
+    }
+
+    @Override
+    public String toString() {
+      return getClass().getSimpleName() + "{" + base + "," + superscript + "," + subscript +"}";
     }
 }

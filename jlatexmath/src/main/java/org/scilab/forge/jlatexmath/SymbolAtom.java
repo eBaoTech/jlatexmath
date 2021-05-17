@@ -203,4 +203,50 @@ public class SymbolAtom extends CharSymbol {
         // style doesn't matter here
         return tf.getChar(name, TeXConstants.STYLE_DISPLAY).getCharFont();
     }
+
+    @Override
+    public String toString() {
+      switch (name) {
+        case "ast":
+          return "*";
+        case "colon":
+          return ":";
+        case "comma":
+          return ",";
+        case "equals":
+          return "=";
+        case "faculty":
+          return "!";
+        case "gt":
+          return ">";
+        case "lbrace":
+          return "{";
+        case "lbrack":
+          return "(";
+        case "lt":
+          return "<";
+        case "minus":
+          return "-";
+        case "normaldot":
+          return ".";
+        case "plus":
+          return "+";
+        case "rbrack":
+          return ")";
+        case "rbrace":
+          return "}";
+        case "slash":
+          return "/";
+        case "textampersand":
+          return "&";
+        case "textapos":
+          return "'";
+        case "textquot":
+          return "\"";
+        case "vert":
+          return "|";
+        default:
+          return getClass().getSimpleName() + "(" + name + ")";
+      }
+    }
 }

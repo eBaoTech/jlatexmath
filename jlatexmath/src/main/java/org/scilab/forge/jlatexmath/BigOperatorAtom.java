@@ -97,6 +97,18 @@ public class BigOperatorAtom extends Atom {
         limitsSet = true;
     }
 
+    public Atom getBase() {
+      return base;
+    }
+
+    public Atom getUnderAtom() {
+      return under;
+    }
+
+    public Atom getOverAtom() {
+      return over;
+    }
+
     public Box createBox(TeXEnvironment env) {
         TeXFont tf = env.getTeXFont();
         int style = env.getStyle();
@@ -220,5 +232,12 @@ public class BigOperatorAtom extends Atom {
             return new HorizontalBox(b, maxWidth, TeXConstants.ALIGN_CENTER);
         else
             return b;
+    }
+
+    @Override
+    public String toString() {
+      StringBuilder s = new StringBuilder();
+      s.append(getClass().getSimpleName()).append("{").append(base).append(",").append(under).append(",").append(over).append("}");
+      return s.toString();
     }
 }

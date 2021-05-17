@@ -155,6 +155,10 @@ public class MatrixAtom extends Atom {
         this(false, array, type);
     }
 
+    public ArrayOfAtoms getMatrix() {
+      return matrix;
+    }
+
     private void parsePositions(StringBuffer opt) {
         int len = opt.length();
         int pos = 0;
@@ -552,5 +556,22 @@ public class MatrixAtom extends Atom {
         mca.setWidth(w);
         b = mca.createBox(env);
         return b;
+    }
+
+    @Override
+    public String toString() {
+      StringBuilder s = new StringBuilder();
+      s.append(getClass().getSimpleName()).append("{").append(matrix.getRows()).append(",").append(matrix.getCols()).append("}");
+      for (int i=0; i<matrix.getRows(); i++) {
+        s.append("\n").append("   ");
+        for (int j=0; j<matrix.getCols(); j++) {
+          Atom a = matrix.getAtom(i, j);
+          if (j>0) {
+            s.append(",");
+          }
+          s.append(a);
+        }
+      }
+      return s.toString();
     }
 }

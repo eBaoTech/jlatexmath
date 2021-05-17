@@ -747,7 +747,8 @@ public class TeXParser {
                     break;
                 case PRIME :
                     if (ignoreWhiteSpace) {
-                        formula.add(new CumulativeScriptsAtom(getLastAtom(), null, SymbolAtom.get("prime")));
+                        //formula.add(new CumulativeScriptsAtom(getLastAtom(), null, SymbolAtom.get("prime")));
+                        formula.add(convertCharacter(PRIME, true));
                     } else {
                         formula.add(convertCharacter(PRIME, true));
                     }
@@ -763,8 +764,9 @@ public class TeXParser {
                     break;
                 case DQUOTE :
                     if (ignoreWhiteSpace) {
-                        formula.add(new CumulativeScriptsAtom(getLastAtom(), null, SymbolAtom.get("prime")));
-                        formula.add(new CumulativeScriptsAtom(getLastAtom(), null, SymbolAtom.get("prime")));
+                        //formula.add(new CumulativeScriptsAtom(getLastAtom(), null, SymbolAtom.get("prime")));
+                        //formula.add(new CumulativeScriptsAtom(getLastAtom(), null, SymbolAtom.get("prime")));
+                        formula.add(convertCharacter(DQUOTE, true));
                     } else {
                         formula.add(convertCharacter(PRIME, true));
                         formula.add(convertCharacter(PRIME, true));

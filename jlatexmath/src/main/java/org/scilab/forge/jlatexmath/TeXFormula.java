@@ -210,6 +210,10 @@ public class TeXFormula {
     // the root atom of the "atom tree" that represents the formula
     public Atom root = null;
 
+    public Atom getRoot() {
+      return root;
+    }
+
     // the current text style
     public String textStyle = null;
 

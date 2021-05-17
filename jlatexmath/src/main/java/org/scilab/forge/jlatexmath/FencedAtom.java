@@ -102,6 +102,18 @@ public class FencedAtom extends Atom {
         return TeXConstants.TYPE_INNER;
     }
 
+    public Atom getBase() {
+      return base;
+    }
+
+    public SymbolAtom getLeftSymbol( ) {
+      return left;
+    }
+
+    public SymbolAtom getRightSymbol( ) {
+      return right;
+    }
+
     /**
      * Centers the given box with resprect to the given axis, by setting an appropriate
      * shift value.
@@ -167,5 +179,19 @@ public class FencedAtom extends Atom {
         }
 
         return hBox;
+    }
+
+    @Override
+    public String toString() {
+      StringBuilder s = new StringBuilder();
+      s.append(getClass().getSimpleName());
+      if (left != null) {
+        s.append(left);
+      }
+      if (right != null) {
+        s.append(right);
+      }
+      s.append(base);
+      return s.toString();
     }
 }

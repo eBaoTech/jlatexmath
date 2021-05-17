@@ -62,4 +62,9 @@ public class UnderscoreAtom extends Atom {
         hb.add(new HorizontalRule(drt, w.createBox(env).getWidth(), 0));
         return hb;
     }
+
+    @Override
+    public String toString() {
+      return "_";
+    }
 }

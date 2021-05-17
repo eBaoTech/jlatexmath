@@ -192,6 +192,14 @@ public class FractionAtom extends Atom {
             return TeXConstants.ALIGN_CENTER;
     }
 
+    public Atom getNumerator() {
+      return numerator;
+    }
+
+    public Atom getDenominator() {
+      return denominator;
+    }
+
     public Box createBox(TeXEnvironment env) {
         TeXFont tf = env.getTeXFont();
         int style = env.getStyle();
@@ -289,5 +297,14 @@ public class FractionAtom extends Atom {
         float f = new SpaceAtom(TeXConstants.UNIT_EM, 0.12f, 0, 0).createBox(env).getWidth();
 
         return new HorizontalBox(vBox, vBox.getWidth() + 2 * f, TeXConstants.ALIGN_CENTER);
+    }
+
+    @Override
+    public String toString() {
+      StringBuilder s = new StringBuilder();
+      s.append(getClass().getSimpleName());
+      s.append("\n").append("    ").append(numerator);
+      s.append("\n").append("    ").append(denominator);
+      return s.toString();
     }
 }

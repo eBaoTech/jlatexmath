@@ -86,6 +86,10 @@ public class ArrayOfAtoms extends TeXFormula {
         return col;
     }
 
+    public Atom getAtom(int row, int col) {
+      return array.get(row).get(col);
+    }
+
     public VRowAtom getAsVRow() {
         VRowAtom vr = new VRowAtom();
         vr.setAddInterline(true);

@@ -123,7 +123,8 @@ public class CharAtom extends CharSymbol {
         return getChar(tf, TeXConstants.STYLE_DISPLAY, false).getCharFont();
     }
 
+    @Override
     public String toString() {
-        return "CharAtom: \'" + c + "\'";
+        return String.valueOf(c);
     }
 }

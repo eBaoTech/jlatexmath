@@ -50,6 +50,7 @@ package org.scilab.forge.jlatexmath;
 
 import java.util.BitSet;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.ListIterator;
 
 import org.scilab.forge.jlatexmath.dynamic.DynamicAtom;
@@ -95,7 +96,7 @@ public class RowAtom extends Atom implements Row {
         ligKernSet.set(TeXConstants.TYPE_PUNCTUATION);
     }
 
-    protected RowAtom() {
+    public RowAtom() {
         // empty
     }
 
@@ -121,6 +122,18 @@ public class RowAtom extends Atom implements Row {
         if (el != null) {
             elements.add(el);
         }
+    }
+
+    public final void addAll(List<Atom> els) {
+      if (els != null) {
+        for (Atom el : els) {
+          elements.add(el);
+        }
+      }
+    }
+
+    public List<Atom> getElements() {
+      return elements;
     }
 
     /**
@@ -272,5 +285,14 @@ public class RowAtom extends Atom implements Row {
         } else {
             return (elements.get(elements.size() - 1)).getRightType();
         }
+    }
+
+    @Override
+    public String toString() {
+      StringBuilder s = new StringBuilder();
+      for (Atom e : elements) {
+        s.append(e);
+      }
+      return s.toString();
     }
 }
