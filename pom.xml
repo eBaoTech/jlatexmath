@@ -1,18 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>com.github.davidmoten</groupId>
-        <artifactId>sonatype-parent</artifactId>
-        <version>0.1</version>
-    </parent>
     <!--<groupId>org.scilab.forge</groupId> -->
-    <groupId>org.scilab.forge</groupId>
+    <groupId>com.ebao.jlatexmath</groupId>
     <artifactId>jlatexmath-parent</artifactId>
     <version>1.0.8-SNAPSHOT</version>
     <name>${project.artifactId}</name>
     <description>parent pom for jlatexmath artifacts</description>
     <packaging>pom</packaging>
-    <url>https://github.com/opencollab/jlatexmath/</url>
+    <url>https://github.com/ebaotech/jlatexmath/</url>
 
     <licenses>
         <license>
@@ -21,17 +16,6 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
-
-    <developers>
-        <developer>
-            <id>ledru</id>
-            <name>Sylvestre Ledru</name>
-        </developer>
-        <developer>
-            <id>denizet</id>
-            <name>Calixte Denizet</name>
-        </developer>
-    </developers>
 
     <scm>
         <connection>${scm.url}</connection>
@@ -42,26 +26,26 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.7</java.version>
+        <java.version>1.8</java.version>
         <fop.version>1.0</fop.version>
         <junit.version>4.12</junit.version>
         <jar.plugin.version>3.0.2</jar.plugin.version>
         <build.helper.plugin.version>1.12</build.helper.plugin.version>
         <!-- nexus staging version should match the one used in sonatype-parent -->
         <nexus.staging.plugin.version>1.6.5</nexus.staging.plugin.version>
-        <scm.url>scm:git:https://github.com/opencollab/jlatexmath.git</scm.url>
+        <scm.url>scm:git:https://github.com/ebaotech/jlatexmath.git</scm.url>
     </properties>
 
     <modules>
-        <module>jlatexmath-font-cyrillic</module>
-        <module>jlatexmath-font-greek</module>
+        <!--module>jlatexmath-font-cyrillic</module-->
+        <!--module>jlatexmath-font-greek</module-->
         <module>jlatexmath</module>
-        <module>jlatexmath-fop</module>
-        <module>jlatexmath-example-giws</module>
-        <module>jlatexmath-example-export</module>
+        <!--module>jlatexmath-fop</module-->
+        <!--module>jlatexmath-example-giws</module-->
+        <!--module>jlatexmath-example-export</module-->
         <!-- require a dummy artifact so can ignore deployment of previous two example modules -->
         <!-- see https://issues.sonatype.org/browse/NEXUS-9138 -->
-        <module>jlatexmath-ignore</module>
+        <!--module>jlatexmath-ignore</module-->
     </modules>
 
     <build>
@@ -126,4 +110,16 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>eBaoTech</id>
+            <url>http://maven-repository.ebaotech.com/artifactory/libs-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>eBaoTech</id>
+            <url>http://maven-repository.ebaotech.com/artifactory/libs-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+    
 </project>

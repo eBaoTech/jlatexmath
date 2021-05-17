@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.scilab.forge</groupId>
+        <groupId>com.ebao.jlatexmath</groupId>
         <artifactId>jlatexmath-parent</artifactId>
         <version>1.0.8-SNAPSHOT</version>
     </parent>
@@ -15,6 +15,7 @@
     </properties>
 
     <dependencies>
+        <!--
         <dependency>
             <groupId>${project.parent.groupId}</groupId>
             <artifactId>jlatexmath-font-greek</artifactId>
@@ -25,6 +26,7 @@
             <artifactId>jlatexmath-font-cyrillic</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+        -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
