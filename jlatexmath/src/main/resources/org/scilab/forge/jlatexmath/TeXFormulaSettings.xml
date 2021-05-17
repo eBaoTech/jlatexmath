@@ -74,6 +74,7 @@
       	  <Map char="[" symbol="lsqbrack"/>
       	  <Map char="}" symbol="rbrace"/>
 	  <Map char="&apos;" symbol="textapos"/>
+	  <Map char="&quot;" symbol="textquot"/>
 	  <Map char="`" symbol="jlatexmathlapos"/>
 	  <Map char="#" symbol="jlatexmathsharp"/>
 	  <Map char="&#163;" symbol="mathsterling"/>
@@ -816,12 +817,12 @@
 	  <Map char="&#8250;" formula="\guilsinglright"/>
 	  <Map char="&#8772;" formula="\not\simeq"/>
 	  <Map char="&#8244;" formula="&apos;&apos;&apos;"/>
-	  <Map char="&#8411;" formula="&apos;&apos;"/>
+	  <Map char="&#8411;" formula="&quot;"/>
 	  <Map char="&#8216;" formula="`"/>
 	  <Map char="&#8220;" formula="``"/>
 	  <Map char="&#8217;" formula="\textapos"/>
 	  <Map char="&#8218;" formula=","/>
-	  <Map char="&#8221;" formula="\textapos\textapos"/>
+	  <Map char="&#8221;" formula="\textquot\textquot"/>
 	  <Map char="&#8222;" formula=",,"/>
 	  <Map char="&#8206;" formula=" "/>
 	  <Map char="&#8207;" formula=" "/>

@@ -37,6 +37,7 @@
   <SymbolMapping name="textampersand" ch="38" fontId="jlm_cmr10"/>
   <SymbolMapping name="jlatexmatharobase" ch="64" fontId="jlm_cmr10"/>
   <SymbolMapping name="textapos" ch="39" fontId="jlm_cmr10"/>
+  <SymbolMapping name="textquot" ch="34" fontId="jlm_cmr10"/>
   <SymbolMapping name="jlatexmathlapos" ch="96" fontId="jlm_cmr10"/>
   <SymbolMapping name="mathsterling" ch="36" fontId="jlm_cmti10_unchanged"/>
 
