@@ -84,10 +84,6 @@ public abstract class Atom implements Cloneable {
      */
     public abstract Box createBox(TeXEnvironment env);
 
-    public <T> T process(AtomProcessor<T> processor) {
-      return processor.process(this);
-    }
-
     /**
      * Get the type of the leftermost child atom. Most atoms have no child atoms,
      * so the "left type" and the "right type" are the same: the atom's type. This
